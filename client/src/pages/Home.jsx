@@ -5,13 +5,35 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [allPosts, setAllPosts] = useState(null);
 
+  const [searchText, setSearchText] = useState("The text searched for");
+
   return (
     <section className="max-w-7xl mx-auto">
       <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">
           The Authetication
-          <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">Hello</p>
+          <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]"></p>
         </h1>
+        <div className="mt-16">
+          <FormField />
+        </div>
+
+        <div className="mt-10">
+          {loading ? (
+            <div className="flex justify-center items-center">
+              <Loader />
+            </div>
+          ) : (
+            <>
+              {searchText && (
+                <h2 className="font-medium text-[#666e75] text-xl mb">
+                  Searching result{" "}
+                  <span className=" text-[#222328]">{searchText}</span>
+                </h2>
+              )}
+            </>
+          )}
+        </div>
       </div>
     </section>
   );
