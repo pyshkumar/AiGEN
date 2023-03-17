@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Loader, Card, FormField } from "../components";
 
 const Home = () => {
@@ -11,9 +11,11 @@ const Home = () => {
     <section className="max-w-7xl mx-auto">
       <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">
-          The Authetication
-          <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]"></p>
+          The Community Service{" "}
         </h1>
+        <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">
+          Browser through a collection imaginative and visulally stunning people
+        </p>
         <div className="mt-16">
           <FormField />
         </div>
@@ -31,6 +33,8 @@ const Home = () => {
                   <span className=" text-[#222328]">{searchText}</span>
                 </h2>
               )}
+
+              <div className=""></div>
             </>
           )}
         </div>
