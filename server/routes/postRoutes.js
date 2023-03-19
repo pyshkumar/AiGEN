@@ -8,3 +8,5 @@ dotenv.config();
 //So that the environment variable are getting populated.
 
 const router = express.Router();
+
+export default router;
