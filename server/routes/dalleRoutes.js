@@ -18,7 +18,7 @@ router.route("/").get((req, res) => {
   res.send("Hello from Dalle 2");
 });
 
-router.route("./").post(async (req, res) => {
+router.route("/").post(async (req, res) => {
   try {
     const { prompt } = req.body; //Comes from the Client side
 
